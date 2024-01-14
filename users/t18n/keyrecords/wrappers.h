@@ -23,6 +23,12 @@ NOTE: These are all the same length.  If you do a search/replace
   lengths consistent.
 */
 // clang-format off
+
+// Buttons are defined for Windows/Linux first, where CMD becomes Ctrl on Mac
+#define ___BTN_WIN_SUPER__      KC_LCTL
+#define ___BTN_WIN_CTRL__       KC_LGUI
+// #define ___BTN_WIN_MEH__        KC_LCTL | MOD_LSFT | MOD_LALT
+
 #define ____QWERTY_L1____       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define ____QWERTY_L2____       KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define ____QWERTY_L3____       KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
@@ -103,7 +109,7 @@ NOTE: These are all the same length.  If you do a search/replace
 
 
 // Vim-like nav
-#define ____VIM_NAV____                 KC_RIGHT, KC_DOWN, KC_UP, KC_LEFT
+#define ____VIM_NAV____                 KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT
 #define ____VIM_NAV_MOUSE____           KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R
 #define ____VIM_NAV_MOUSE_WHEEL____     KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R
 #define ____VIM_NAV_PAGE____            KC_HOME, KC_PGDN, KC_PGUP, KC_END

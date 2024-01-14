@@ -6,7 +6,7 @@ This repo is largely borrowed from [drashna's settings](https://github.com/drash
 
 ## Docs
 - [Feature documentation](https://github.com/qmk/qmk_firmware/tree/master/docs)
-
+- [Keycodes](https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/keycodes.md)
 
 ## Howto configure your build targets
 

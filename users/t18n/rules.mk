@@ -11,6 +11,7 @@ DEFERRED_EXEC_ENABLE = yes
 
 # Enable automatic Ctrl - CMD swap on Mac OS
 OS_DETECTION_ENABLE  = yes
+# OS_DETECTION_ENABLE := no
 DEBUG_MATRIX_SCAN_RATE_ENABLE := no
 
 ifeq ($(PLATFORM_KEY),chibios)
