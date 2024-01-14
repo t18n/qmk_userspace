@@ -2,8 +2,11 @@
 
 This is a template repository which allows for an external set of QMK keymaps to be defined and compiled. This is useful for users who want to maintain their own keymaps without having to fork the main QMK repository.
 
+This repo is largely borrowed from [drashna's settings](https://github.com/drashna/qmk_userspace). His settings is incredible and he is very helpful as well. Please give the repo a star.
+
 ## Docs
 - [Feature documentation](https://github.com/qmk/qmk_firmware/tree/master/docs)
+
 
 ## Howto configure your build targets
 
