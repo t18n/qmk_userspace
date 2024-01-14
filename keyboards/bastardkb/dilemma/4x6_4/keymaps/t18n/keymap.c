@@ -19,8 +19,8 @@
      MT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
      KC_TAB,    K01,    K02,    K03,    K04,    K05,                K06,    K07,    K08,    K09,        K0A,    KC_EQUAL, \
      KC_LSFT, K11,    K12,    K13,    K14,    K15,                K16,    K17,    K18,    K19,        K1A,    KC_QUOTE, \
-     KC_LCTL,  K21,    K22,    K23,    K24,    K25,                K26,    K27,    K28,    K29,        K2A,    KC_GRAVE, \
-            KC_MUTE, KC_LGUI,  LT(_RAISE, KC_SPC),  KC_BSPC,                 MEH_T(KC_SPC),  MO(_LOWER),  KC_ENTER,   RGB_MODE_FORWARD \
+     KC_LGUI,  K21,    K22,    K23,    K24,    K25,                K26,    K27,    K28,    K29,        K2A,    KC_GRAVE, \
+            KC_MUTE, KC_LCTL,  LT(_RAISE, KC_SPC),  KC_BSPC,                 MEH_T(KC_SPC),  MO(_LOWER),  KC_ENTER,   RGB_MODE_FORWARD \
     )
 
 #define LAYOUT_base_wrapper(...)       LAYOUT_base(__VA_ARGS__)
@@ -76,7 +76,7 @@ bool oled_task_keymap(void) {
 
     oled_write_raw_P(header_image, sizeof(header_image));
     oled_set_cursor(4, 0);
-    oled_write_P(PSTR(" Dilemma Max"), true);
+    oled_write_P(PSTR(" @t18n"), true);
 
     render_default_layer_state(1, 1);
     render_layer_state(1, 2);

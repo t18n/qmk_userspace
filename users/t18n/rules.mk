@@ -10,7 +10,7 @@ DEBOUNCE_TYPE        = asym_eager_defer_pk
 DEFERRED_EXEC_ENABLE = yes
 
 # Enable automatic Ctrl - CMD swap on Mac OS
-OS_DETECTION_ENABLE  = no
+OS_DETECTION_ENABLE  = yes
 DEBUG_MATRIX_SCAN_RATE_ENABLE := no
 
 ifeq ($(PLATFORM_KEY),chibios)
