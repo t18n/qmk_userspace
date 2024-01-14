@@ -61,29 +61,29 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
             // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-                    _______,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
+                    _____,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_F12,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CAPS,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_CAPS,
             // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                    XXXXXXX, _______, _______, _______,    _______, _______, _______, XXXXXXX
+                                    XXXXXXX, _____, _____, _____,    _____, _____, _____, XXXXXXX
             //                    ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
   ),
 
   [LAYER_RAISE] = LAYOUT(
             // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+                _____, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _____,
             // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                    XXXXXXX, _______, _______, _______,    _______, _______, _______, XXXXXXX
+                                    XXXXXXX, _____, _____, _____,    _____, _____, _____, XXXXXXX
             //                    ╰───────────────────────────────────╯ ╰───────────────────────────────────╯
   ),
 
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
                 XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
             // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-                XXXXXXX, _______, DRGSCRL, SNIPING, EE_CLR,  QK_BOOT,    QK_BOOT, EE_CLR,  SNIPING, DRGSCRL, _______, XXXXXXX,
+                XXXXXXX, _____, DRGSCRL, SNIPING, EE_CLR,  QK_BOOT,    QK_BOOT, EE_CLR,  SNIPING, DRGSCRL, _____, XXXXXXX,
             // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
                                     XXXXXXX, KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1, KC_BTN2, XXXXXXX
             //                    ╰───────────────────────────────────╯ ╰───────────────────────────────────╯

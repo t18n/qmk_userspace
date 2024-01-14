@@ -8,7 +8,9 @@ SRC += $(USER_PATH)/t18n.c \
 
 DEBOUNCE_TYPE        = asym_eager_defer_pk
 DEFERRED_EXEC_ENABLE = yes
-OS_DETECTION_ENABLE  = yes
+
+# Enable automatic Ctrl - CMD swap on Mac OS
+OS_DETECTION_ENABLE  = no
 DEBUG_MATRIX_SCAN_RATE_ENABLE := no
 
 ifeq ($(PLATFORM_KEY),chibios)
