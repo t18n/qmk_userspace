@@ -2,6 +2,10 @@
 
 [Official Documentation](https://docs.bastardkb.com/bg_dilemma/customize.html)
 
+## Layout
+
+The layout image is generated in GitHub Actions from `keymap.c` and uploaded as the `t18n-keymap-layout` artifact.
+
 ## Build
 
 GitHub Actions:
@@ -24,6 +28,4 @@ If your keymap has a `QK_BOOT` key, you can use that instead of pressing the but
 
 ## Tools
 
-For more visual approach:
-
-https://config.qmk.fm/#/bastardkb/dilemma/4x6_4/LAYOUT
+The CI workflow renders the layout from `keymap.c` using `qmk c2json` and `keymap-drawer`.

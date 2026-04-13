@@ -1,0 +1,9 @@
+layout:
+  ortho_layout:
+    split: true
+    rows: 4
+    columns: 6
+    thumbs: 4
+
+draw_config:
+  split_gap: 36

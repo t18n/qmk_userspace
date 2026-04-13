@@ -13,6 +13,52 @@ jobs:
       qmk_repo: qmk/qmk_firmware
       qmk_ref: master
 
+  render-layout:
+    name: 'Render keymap layout'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout userspace
+        uses: actions/checkout@v4
+
+      - name: Checkout QMK firmware
+        uses: actions/checkout@v4
+        with:
+          repository: qmk/qmk_firmware
+          ref: master
+          path: qmk_firmware
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install render dependencies
+        run: python -m pip install --upgrade pip qmk keymap-drawer
+
+      - name: Generate layout artifacts
+        run: |
+          qmk config user.qmk_home="$GITHUB_WORKSPACE/qmk_firmware"
+          qmk config user.overlay_dir="$GITHUB_WORKSPACE"
+          qmk c2json \
+            -kb bastardkb/dilemma/4x6_4 \
+            -km t18n \
+            "$GITHUB_WORKSPACE/keyboards/bastardkb/dilemma/4x6_4/keymaps/t18n/keymap.c" \
+            -o "$RUNNER_TEMP/t18n-keymap.json"
+          keymap parse \
+            -q "$RUNNER_TEMP/t18n-keymap.json" \
+            -b "$GITHUB_WORKSPACE/keyboards/bastardkb/dilemma/4x6_4/keymaps/t18n/keymap-layout.yaml" \
+            -l Base Lower Raise \
+            -o "$RUNNER_TEMP/t18n-keymap.yaml"
+          keymap draw "$RUNNER_TEMP/t18n-keymap.yaml" > "$RUNNER_TEMP/t18n-keymap.svg"
+
+      - name: Upload layout artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: t18n-keymap-layout
+          path: |
+            ${{ runner.temp }}/t18n-keymap.yaml
+            ${{ runner.temp }}/t18n-keymap.svg
+
   publish:
     name: 'QMK Userspace Publish'
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
