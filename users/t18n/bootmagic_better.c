@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "t18n.h"
-#include "bootmagic_lite.h"
+#include "bootmagic/bootmagic.h"
 
 void bootmagic_lite(void) {
     bool perform_reset = false;
@@ -19,15 +19,15 @@ void bootmagic_lite(void) {
     // reset the EEPROM valid state and jump to bootloader.
     // This isn't very generalized, but we need something that doesn't
     // rely on user's keymaps in firmware or EEPROM.
-    uint8_t row = BOOTMAGIC_LITE_ROW, col = BOOTMAGIC_LITE_COLUMN;
+    uint8_t row = BOOTMAGIC_ROW, col = BOOTMAGIC_COLUMN;
 #if defined(BOOTMAGIC_LITE_EEPROM_ROW) && defined(BOOTMAGIC_LITE_EEPROM_COLUMN)
     uint8_t row_e = BOOTMAGIC_LITE_EEPROM_ROW, col_e = BOOTMAGIC_LITE_EEPROM_COLUMN;
 #endif
 
-#if defined(SPLIT_KEYBOARD) && defined(BOOTMAGIC_LITE_ROW_RIGHT) && defined(BOOTMAGIC_LITE_COLUMN_RIGHT)
+#if defined(SPLIT_KEYBOARD) && defined(BOOTMAGIC_ROW_RIGHT) && defined(BOOTMAGIC_COLUMN_RIGHT)
     if (!is_keyboard_left()) {
-        row = BOOTMAGIC_LITE_ROW_RIGHT;
-        col = BOOTMAGIC_LITE_COLUMN_RIGHT;
+        row = BOOTMAGIC_ROW_RIGHT;
+        col = BOOTMAGIC_COLUMN_RIGHT;
 #    if defined(BOOTMAGIC_LITE_EEPROM_ROW) && defined(BOOTMAGIC_LITE_EEPROM_COLUMN) && \
         defined(BOOTMAGIC_LITE_EEPROM_ROW_RIGHT) && defined(BOOTMAGIC_LITE_EEPROM_COLUMN_RIGHT)
         row_e = BOOTMAGIC_LITE_EEPROM_ROW_RIGHT;

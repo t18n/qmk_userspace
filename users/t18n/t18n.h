@@ -4,6 +4,112 @@
 #pragma once
 #include QMK_KEYBOARD_H
 
+#ifndef RGB_TOG
+#    define RGB_TOG UG_TOGG
+#endif
+#ifndef RGB_MOD
+#    define RGB_MOD UG_NEXT
+#endif
+#ifndef RGB_RMOD
+#    define RGB_RMOD UG_PREV
+#endif
+#ifndef RGB_HUI
+#    define RGB_HUI UG_HUEU
+#endif
+#ifndef RGB_HUD
+#    define RGB_HUD UG_HUED
+#endif
+#ifndef RGB_SAI
+#    define RGB_SAI UG_SATU
+#endif
+#ifndef RGB_SAD
+#    define RGB_SAD UG_SATD
+#endif
+#ifndef RGB_VAI
+#    define RGB_VAI UG_VALU
+#endif
+#ifndef RGB_VAD
+#    define RGB_VAD UG_VALD
+#endif
+#ifndef RGB_SPI
+#    define RGB_SPI UG_SPDU
+#endif
+#ifndef RGB_SPD
+#    define RGB_SPD UG_SPDD
+#endif
+#ifndef KC_MS_BTN1
+#    define KC_MS_BTN1 MS_BTN1
+#endif
+#ifndef KC_MS_BTN2
+#    define KC_MS_BTN2 MS_BTN2
+#endif
+#ifndef KC_MS_BTN3
+#    define KC_MS_BTN3 MS_BTN3
+#endif
+#ifndef KC_MS_BTN4
+#    define KC_MS_BTN4 MS_BTN4
+#endif
+#ifndef KC_MS_BTN5
+#    define KC_MS_BTN5 MS_BTN5
+#endif
+#ifndef KC_MS_BTN6
+#    define KC_MS_BTN6 MS_BTN6
+#endif
+#ifndef KC_MS_BTN7
+#    define KC_MS_BTN7 MS_BTN7
+#endif
+#ifndef KC_MS_BTN8
+#    define KC_MS_BTN8 MS_BTN8
+#endif
+#ifndef KC_MS_U
+#    define KC_MS_U MS_UP
+#endif
+#ifndef KC_MS_D
+#    define KC_MS_D MS_DOWN
+#endif
+#ifndef KC_MS_L
+#    define KC_MS_L MS_LEFT
+#endif
+#ifndef KC_MS_R
+#    define KC_MS_R MS_RGHT
+#endif
+#ifndef KC_WH_U
+#    define KC_WH_U MS_WHLU
+#endif
+#ifndef KC_WH_D
+#    define KC_WH_D MS_WHLD
+#endif
+#ifndef KC_WH_L
+#    define KC_WH_L MS_WHLL
+#endif
+#ifndef KC_WH_R
+#    define KC_WH_R MS_WHLR
+#endif
+#ifndef KC_BTN1
+#    define KC_BTN1 MS_BTN1
+#endif
+#ifndef KC_BTN2
+#    define KC_BTN2 MS_BTN2
+#endif
+#ifndef KC_BTN3
+#    define KC_BTN3 MS_BTN3
+#endif
+#ifndef KC_BTN4
+#    define KC_BTN4 MS_BTN4
+#endif
+#ifndef KC_BTN5
+#    define KC_BTN5 MS_BTN5
+#endif
+#ifndef KC_BTN6
+#    define KC_BTN6 MS_BTN6
+#endif
+#ifndef KC_BTN7
+#    define KC_BTN7 MS_BTN7
+#endif
+#ifndef KC_BTN8
+#    define KC_BTN8 MS_BTN8
+#endif
+
 #include "eeconfig_users.h"
 #include "keyrecords/wrappers.h"
 #include "keyrecords/process_records.h"
