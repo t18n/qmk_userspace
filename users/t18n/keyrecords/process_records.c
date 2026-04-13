@@ -175,9 +175,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             break;
-        case RGB_MODE_FORWARD ... RGB_MODE_GRADIENT: // quantum_keycodes.h L400 for definitions
+        case RGB_MOD:
+        case RGB_RMOD:
+        case RGB_M_P:
+        case RGB_M_B:
+        case RGB_M_R:
+        case RGB_M_SW:
+        case RGB_M_SN:
+        case RGB_M_K:
+        case RGB_M_X:
+        case RGB_M_G:
             if (record->event.pressed) {
-                bool is_eeprom_updated;
+                bool is_eeprom_updated = false;
 #    if defined(CUSTOM_RGBLIGHT) && !defined(RGBLIGHT_DISABLE_KEYCODES)
                 // This disables layer indication, as it's assumed that if you're changing this ... you want that
                 // disabled

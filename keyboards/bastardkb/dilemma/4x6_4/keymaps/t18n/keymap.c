@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV,  ____RAISE_L1____,    ____RAISE_R1____, _______,
         _______, ____RAISE_L2____,    ____RAISE_R2____, KC_BSLS,
         _______, ____RAISE_L3____,    ____RAISE_R3____, _______,
-                RGB_MODE_FORWARD, _______, _______, _______,    _______, _______, _______, RGB_TOG
+                RGB_MOD, _______, _______, _______,    _______, _______, _______, RGB_TOG
     )
 };
 // clang-format on

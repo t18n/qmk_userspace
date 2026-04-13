@@ -283,9 +283,9 @@ void                       eeconfig_init_user(void) {
 #endif
 
     // ensure that nkro is enabled
-    keymap_config.raw  = eeconfig_read_keymap();
+    eeconfig_read_keymap(&keymap_config);
     keymap_config.nkro = true;
-    eeconfig_update_keymap(keymap_config.raw);
+    eeconfig_update_keymap(&keymap_config);
 
     eeconfig_update_user_config(&userspace_config.raw);
     eeconfig_init_keymap();

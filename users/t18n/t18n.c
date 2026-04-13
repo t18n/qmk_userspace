@@ -227,7 +227,7 @@ uint32_t startup_exec(uint32_t trigger_time, void *cb_arg) {
             bool is_mac = (os_type == OS_MACOS) || (os_type == OS_IOS);
             if (keymap_config.swap_lctl_lgui != is_mac) {
                 keymap_config.swap_lctl_lgui = keymap_config.swap_rctl_rgui = is_mac;
-                eeconfig_update_keymap(keymap_config.raw);
+                eeconfig_update_keymap(&keymap_config);
             }
 #    ifdef UNICODE_COMMON_ENABLE
             set_unicode_input_mode_soft(keymap_config.swap_lctl_lgui ? UNICODE_MODE_MACOS : UNICODE_MODE_WINCOMPOSE);

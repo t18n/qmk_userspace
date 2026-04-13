@@ -28,4 +28,4 @@ If your keymap has a `QK_BOOT` key, you can use that instead of pressing the but
 
 ## Tools
 
-The CI workflow renders the layout from `keymap.c` using `qmk c2json` and `keymap-drawer`.
+The CI workflow renders the layout from `keymap.c` using `scripts/render_keymap_drawer.py` and `keymap-drawer`.

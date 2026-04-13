@@ -144,16 +144,36 @@ bool process_record_unicode(uint16_t keycode, keyrecord_t *record);
 #define KC_MLSF OSM(MOD_LSFT)
 #define KC_MRSF OSM(MOD_RSFT)
 
-#define OS_LGUI OSM(MOD_LGUI)
-#define OS_RGUI OSM(MOD_RGUI)
-#define OS_LSFT OSM(MOD_LSFT)
-#define OS_RSFT OSM(MOD_RSFT)
-#define OS_LCTL OSM(MOD_LCTL)
-#define OS_RCTL OSM(MOD_RCTL)
-#define OS_LALT OSM(MOD_LALT)
-#define OS_RALT OSM(MOD_RALT)
-#define OS_MEH  OSM(MOD_MEH)
-#define OS_HYPR OSM(MOD_HYPR)
+#ifndef OS_LGUI
+#    define OS_LGUI OSM(MOD_LGUI)
+#endif
+#ifndef OS_RGUI
+#    define OS_RGUI OSM(MOD_RGUI)
+#endif
+#ifndef OS_LSFT
+#    define OS_LSFT OSM(MOD_LSFT)
+#endif
+#ifndef OS_RSFT
+#    define OS_RSFT OSM(MOD_RSFT)
+#endif
+#ifndef OS_LCTL
+#    define OS_LCTL OSM(MOD_LCTL)
+#endif
+#ifndef OS_RCTL
+#    define OS_RCTL OSM(MOD_RCTL)
+#endif
+#ifndef OS_LALT
+#    define OS_LALT OSM(MOD_LALT)
+#endif
+#ifndef OS_RALT
+#    define OS_RALT OSM(MOD_RALT)
+#endif
+#ifndef OS_MEH
+#    define OS_MEH OSM(MOD_MEH)
+#endif
+#ifndef OS_HYPR
+#    define OS_HYPR OSM(MOD_HYPR)
+#endif
 
 #define ALT_APP ALT_T(KC_APP)
 
