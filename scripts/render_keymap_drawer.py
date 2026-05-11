@@ -289,8 +289,9 @@ def main() -> None:
 
     layer_map = [
         ("_DEFAULT_LAYER_1", "Base"),
-        ("_LOWER", "Lower"),
+        # ("_LOWER", "Raise"),
         ("_RAISE", "Raise"),
+        ("_FN", "Fn"),
     ]
 
     output_lines = [layout_yaml, "", "layers:"]
