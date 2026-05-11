@@ -14,11 +14,11 @@
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
     ) \
     LAYOUT_wrapper ( \
-     MT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
+     MT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, HYPR_T(KC_MINUS), \
      KC_TAB,    K01,    K02,    K03,    K04,    K05,                K06,    K07,    K08,    K09,        K0A,    KC_EQUAL, \
      KC_LSFT, K11,    K12,    K13,    K14,    K15,                K16,    K17,    K18,    K19,        K1A,    KC_QUOTE, \
      ___BTN_WIN_CTRL__,  K21,    K22,    K23,    K24,    K25,                K26,    K27,    K28,    K29,        K2A,    LT(_FN, KC_GRAVE), \
-           KC_MUTE, ___BTN_WIN_SUPER__,  LT(_RAISE, KC_SPC),  KC_BSPC,       HYPR_T(KC_SPC),  MO(_RAISE),  KC_ENTER,   KC_MS_BTN3 \
+           KC_MUTE, ___BTN_WIN_SUPER__,  LT(_RAISE, KC_SPC),  KC_BSPC,       MEH_T(KC_SPC),  MO(_RAISE),  KC_ENTER,   KC_MS_BTN3 \
     )
 
 #define LAYOUT_base_wrapper(...)       LAYOUT_base(__VA_ARGS__)
@@ -33,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TILD, _______, _______,   _______, _______,  _______,    _______, _______, _______, _______, _______, KC_TILD,
         _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
         KC_PIPE, _______, KC_RGHT, KC_UP, KC_DOWN, KC_LEFT,    KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, KC_PIPE,
-        KC_BSLS, _______, KC_RCBR, KC_LCBR, KC_RBRC, KC_LBRC,    KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR,   _______,   KC_BSLS,
+        KC_BSLS, _______, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC,    KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR,   _______,   KC_BSLS,
                 RGB_MOD, _______, _______, KC_DEL,     _______, _______, _______, RGB_TOG
     ),
     // [_LOWER] = LAYOUT_wrapper(
