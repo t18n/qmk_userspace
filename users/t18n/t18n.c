@@ -323,6 +323,8 @@ const char *get_layer_name_string(layer_state_t state, bool alt_name) {
             return "Raise";
         case _ADJUST:
             return "Adjust";
+        case _FN:
+            return "Fn";
         default:
             return "Unknown";
     }

@@ -154,6 +154,7 @@ enum userspace_layers {
     _LOWER,
     _RAISE,
     _ADJUST,
+    _FN,
 };
 
 #define _MACROS          _MOUSE
