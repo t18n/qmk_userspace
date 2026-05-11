@@ -14,11 +14,11 @@
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
     ) \
     LAYOUT_wrapper ( \
-     LT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
+     MT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
      KC_TAB,    K01,    K02,    K03,    K04,    K05,                K06,    K07,    K08,    K09,        K0A,    KC_EQUAL, \
      KC_LSFT, K11,    K12,    K13,    K14,    K15,                K16,    K17,    K18,    K19,        K1A,    KC_QUOTE, \
      ___BTN_WIN_CTRL__,  K21,    K22,    K23,    K24,    K25,                K26,    K27,    K28,    K29,        K2A,    LT(_FN, KC_GRAVE), \
-            KC_MUTE, ___BTN_WIN_SUPER__,  LT(_RAISE, KC_SPC),  KC_BSPC,       HYPR_T(KC_SPC),  MO(_LOWER),  KC_ENTER,   BL_TOGG \
+           KC_MUTE, ___BTN_WIN_SUPER__,  LT(_RAISE, KC_SPC),  KC_BSPC,       HYPR_T(KC_SPC),  MO(_RAISE),  KC_ENTER,   KC_MS_BTN3 \
     )
 
 #define LAYOUT_base_wrapper(...)       LAYOUT_base(__VA_ARGS__)
@@ -29,14 +29,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ____QWERTY_L2____, ____QWERTY_R2____,
         ____QWERTY_L3____, ____QWERTY_R3____
     ),
-    [_LOWER] = LAYOUT_wrapper(
+    [_RAISE] = LAYOUT_wrapper(
         KC_TILD, _______, _______,   _______, _______,  _______,    _______, _______, _______, _______, _______, KC_TILD,
         _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
-        KC_PIPE, _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PIPE,
-        KC_BSLS, KC_RCBR, KC_LCBR, KC_BSLS, KC_RBRC, KC_LBRC,    KC_LBRC, KC_RBRC, KC_BSLS, KC_LCBR,   KC_RCBR,   KC_BSLS,
-                _______, _______, _______, KC_DEL,     _______, _______, _______, QK_CLEAR_EEPROM
+        KC_PIPE, _______, KC_RGHT, KC_UP, KC_DOWN, KC_LEFT,    KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, KC_PIPE,
+        KC_BSLS, _______, KC_RCBR, KC_LCBR, KC_RBRC, KC_LBRC,    KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR,   _______,   KC_BSLS,
+                RGB_MOD, _______, _______, KC_DEL,     _______, _______, _______, RGB_TOG
     ),
-    // [_RAISE] = LAYOUT_wrapper(
+    // [_LOWER] = LAYOUT_wrapper(
     //     _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
     //     _______, KC_HOME, KC_PGUP, KC_UP,   KC_END,  _______,    KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, _______,
     //     _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
@@ -45,10 +45,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ),
     [_FN] = LAYOUT_wrapper(
         _______,  ____FUNC_LEFT____,    ____FUNC_RIGHT____, KC_F11,
-        _______, _______, _______, _______, _______, _______,    KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE, KC_F12,
-        _______, KC_MPLY, _______, _______, _______, _______,    KC_PGUP, KC_HOME, KC_UP,   KC_END, _______,
+        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, KC_F12,
+        _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, _______,    KC_PGUP, KC_PGUP, KC_UP,   KC_END, _______, _______,
         _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
-                RGB_MOD, _______, _______, _______,    _______, _______, _______, RGB_TOG
+                _______, _______, _______, _______,    _______, _______, _______, QK_CLEAR_EEPROM
     )
 };
 // clang-format on
@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #ifdef ENCODER_MAP_ENABLE
 // clang-format off
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
-    [_DEFAULT_LAYER_1] = { ENCODER_CCW_CW( KC_VOLD, KC_VOLU ), ENCODER_CCW_CW( KC_BRID, KC_BRIU ) },
-    [_RAISE]           = { ENCODER_CCW_CW( RGB_MOD, RGB_RMOD), ENCODER_CCW_CW( RGB_HUI, RGB_HUD ) },
-    [_LOWER]           = { ENCODER_CCW_CW( KC_PGDN, KC_PGUP ), ENCODER_CCW_CW( OL_BINC, OL_BDEC ) },
+    [_DEFAULT_LAYER_1] = { ENCODER_CCW_CW( KC_VOLD, KC_VOLU ), ENCODER_CCW_CW( KC_WH_L, KC_WH_R ) },
+    [_RAISE]           = { ENCODER_CCW_CW( RGB_MOD, RGB_RMOD), ENCODER_CCW_CW( KC_BRID, KC_BRIU ) },
+    // [_LOWER]           = { ENCODER_CCW_CW( KC_PGDN, KC_PGUP ), ENCODER_CCW_CW( OL_BINC, OL_BDEC ) },
     [_FN]              = { ENCODER_CCW_CW( KC_MPRV, KC_MNXT ), ENCODER_CCW_CW( RGB_HUI, RGB_HUD ) },
 };
 // clang-format on
