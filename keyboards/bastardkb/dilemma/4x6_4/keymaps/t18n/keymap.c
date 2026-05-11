@@ -14,7 +14,7 @@
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
     ) \
     LAYOUT_wrapper ( \
-     LT(_FN, KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
+     LT(MOD_LALT,KC_ESC),  ____NUMBER_LEFT____,            ____NUMBER_RIGHT____, KC_MINUS, \
      KC_TAB,    K01,    K02,    K03,    K04,    K05,                K06,    K07,    K08,    K09,        K0A,    KC_EQUAL, \
      KC_LSFT, K11,    K12,    K13,    K14,    K15,                K16,    K17,    K18,    K19,        K1A,    KC_QUOTE, \
      ___BTN_WIN_CTRL__,  K21,    K22,    K23,    K24,    K25,                K26,    K27,    K28,    K29,        K2A,    LT(_FN, KC_GRAVE), \
@@ -30,25 +30,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ____QWERTY_L3____, ____QWERTY_R3____
     ),
     [_LOWER] = LAYOUT_wrapper(
-        KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,    KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
-        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, KC_PLUS,
-        _______, _______, _______, _______, _______, _______,    KC_LCBR, KC_RCBR, KC_PIPE, KC_COLN, KC_DQUO, _______,
-        _______, _______, _______, _______, _______, _______,    KC_LBRC, KC_RBRC, KC_BSLS, KC_LT,   KC_GT,   KC_QUES,
+        KC_TILD, _______, _______,   _______, _______,  _______,    _______, _______, _______, _______, _______, KC_TILD,
+        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
+        KC_PIPE, _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, KC_PIPE,
+        KC_BSLS, KC_RCBR, KC_LCBR, KC_BSLS, KC_RBRC, KC_LBRC,    KC_LBRC, KC_RBRC, KC_BSLS, KC_LCBR,   KC_RCBR,   KC_BSLS,
                 _______, _______, _______, KC_DEL,     _______, _______, _______, QK_CLEAR_EEPROM
     ),
-    [_RAISE] = LAYOUT_wrapper(
-        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
-        _______, KC_HOME, KC_PGUP, KC_UP,   KC_END,  _______,    KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, _______,
-        _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
-        _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
-                RGB_MOD, _______, _______, _______,    _______, _______, _______, RGB_TOG
-    ),
+    // [_RAISE] = LAYOUT_wrapper(
+    //     _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
+    //     _______, KC_HOME, KC_PGUP, KC_UP,   KC_END,  _______,    KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, _______,
+    //     _______, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______,    KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
+    //     _______, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______,    KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
+    //             RGB_MOD, _______, _______, _______,    _______, _______, _______, RGB_TOG
+    // ),
     [_FN] = LAYOUT_wrapper(
         _______,  ____FUNC_LEFT____,    ____FUNC_RIGHT____, KC_F11,
-        _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, KC_F12,
-        _______, KC_MPLY, _______, _______, _______, _______,    KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE, _______,
+        _______, _______, _______, _______, _______, _______,    KC_BRID, KC_BRIU, KC_VOLD, KC_VOLU, KC_MUTE, KC_F12,
+        _______, KC_MPLY, _______, _______, _______, _______,    KC_PGUP, KC_HOME, KC_UP,   KC_END, _______,
         _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______,
-                _______, _______, _______, _______,    _______, _______, _______, _______
+                RGB_MOD, _______, _______, _______,    _______, _______, _______, RGB_TOG
     )
 };
 // clang-format on
